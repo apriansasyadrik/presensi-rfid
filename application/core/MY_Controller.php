@@ -67,3 +67,36 @@ class MY_Controller extends CI_Controller {
         }
     }
 }
+
+/**
+ * Admin Controller - for Admin role only
+ */
+class Admin_Controller extends MY_Controller {
+    protected $allowed_roles = array('admin');
+    
+    public function __construct() {
+        parent::__construct();
+    }
+}
+
+/**
+ * Guru Controller - for Teacher roles
+ */
+class Guru_Controller extends MY_Controller {
+    protected $allowed_roles = array('guru', 'guru_wali_kelas', 'guru_piket');
+    
+    public function __construct() {
+        parent::__construct();
+    }
+}
+
+/**
+ * BK Controller - for BK (Bimbingan Konseling) role
+ */
+class BK_Controller extends MY_Controller {
+    protected $allowed_roles = array('bk');
+    
+    public function __construct() {
+        parent::__construct();
+    }
+}

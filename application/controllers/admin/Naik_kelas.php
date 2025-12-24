@@ -3,10 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Naik_kelas extends MY_Controller {
 
+    protected $allowed_roles = array('admin');
+
     public function __construct() {
         parent::__construct();
-        $this->check_login();
-        $this->check_role(['admin']);
         $this->load->model('admin/Naik_kelas_model');
     }
 
