@@ -3,9 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Wa_config extends MY_Controller {
 
+    protected $allowed_roles = array('admin');
+
     public function __construct() {
         parent::__construct();
-        $this->check_role(['Admin']);
         $this->load->model('admin/Wa_config_model');
         $this->load->model('admin/Kelas_model');
     }

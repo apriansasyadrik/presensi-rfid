@@ -3,9 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Jadwal_pelajaran extends MY_Controller {
 
+    protected $allowed_roles = array('admin');
+
     public function __construct() {
         parent::__construct();
-        $this->check_role(['Admin']);
         $this->load->model('admin/Jadwal_pelajaran_model');
         $this->load->model('admin/Kelas_model');
         $this->load->model('admin/Mata_pelajaran_model');
