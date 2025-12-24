@@ -73,10 +73,6 @@ class MY_Controller extends CI_Controller {
  */
 class Admin_Controller extends MY_Controller {
     protected $allowed_roles = array('admin');
-    
-    public function __construct() {
-        parent::__construct();
-    }
 }
 
 /**
@@ -84,10 +80,6 @@ class Admin_Controller extends MY_Controller {
  */
 class Guru_Controller extends MY_Controller {
     protected $allowed_roles = array('guru', 'guru_wali_kelas', 'guru_piket');
-    
-    public function __construct() {
-        parent::__construct();
-    }
 }
 
 /**
@@ -95,8 +87,4 @@ class Guru_Controller extends MY_Controller {
  */
 class BK_Controller extends MY_Controller {
     protected $allowed_roles = array('bk');
-    
-    public function __construct() {
-        parent::__construct();
-    }
 }
